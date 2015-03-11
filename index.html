@@ -7,31 +7,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>DESN 378 Website Starter</title>
+  <title>P5-Weather</title>
 
   <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 
-<body>
+<body class="rain">
   <div class="layer">
 
-  <p class="field">
-    <label>ENTER ZIP CODE</label>
-    <input type="text" id="zip">
-    <button id="getZip">Enter</button>
-  </p>
-
   <ul>
-    <li class="temp"> </li>
-    <li class="city"> </li>
-    <li class="state"> <li>
-    <li class="country"> </li>
-  <button class="getGeolocation">Get Geolocation</button>
+    <li class="yourtemp"> </li>
+    <li class="yourcity"> </li>
+    <li class="yourstate"> <li>
+    <li class="yourcountry"> </li>
+  <button class="getGeolocation">Where You Are</button>
   </ul>
 
-
+  <p class="field">
+    <input type="text" id="zip" value="Where You're Sick For">
+    <button id="getZip"> </button>
+    <ul>
+      <li class="theirtemp"> </li>
+      <li class="theircity"> </li>
+      <li class="theirstate"> <li>
+      <li class="theircountry"> </li>
+    </ul>
+  </p>
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
   <script src="js/semantic.min.js"></script>

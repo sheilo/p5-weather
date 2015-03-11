@@ -1,5 +1,13 @@
-body{
-	background: url('../img/wetsnowbg.png');
+.rain{
+	background: url('../img/rain.png');
+}
+
+.clear{
+	background: url('../img/clear.png');
+}
+
+.snow{
+	background: url('../img/snow.png');
 }
 
 li{
@@ -7,7 +15,7 @@ li{
 }
 
 .layer {
-    background-color: rgba(50, 61, 92, 0.85);
+    background-color: rgba(50, 61, 92, 0.55);
     position: absolute;
     top: 0;
     left: 0;

@@ -21,11 +21,10 @@ $('#getZip').click(function(){
       var thumb= weather.thumbnail;
       
       // Output to hooks in HTML
-      $('.temp').text(temp);
-      $('.city').text(city);
-      $('.state').text(state);
-      $('.country').text(country);
-      $('.thumb img').attr('src', thumb);
+      $('.theirtemp').text(temp);
+      $('.theircity').text(city);
+      $('.theirstate').text(state);
+      $('.theircountry').text(country);
       
       // See console for _weather_ object
       console.log(weather);
@@ -80,10 +79,10 @@ var loadWeather = function(location) {
       var country = weather.country;
       
       // Output to hooks in HTML
-      $('.temp').text(temp);
-      $('.city').text(city);
-      $('.state').text(state);
-      $('.country').text(country);
+      $('.yourtemp').text(temp);
+      $('.yourcity').text(city);
+      $('.yourstate').text(state);
+      $('.yourcountry').text(country);
       // See console for _weather_ object
       console.log(weather);
     }
