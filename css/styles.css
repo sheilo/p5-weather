@@ -23,10 +23,38 @@
     height: 100%;
 }
 
+h1, 
 p, 
 li, 
 button {
 	font-family: 'Quicksand', sans-serif;
+}
+
+input[type=text]{
+	border: none;
+	box-shadow: none;
+	padding: 5px;
+	margin: 5px;
+}
+
+button{
+	height: 27px;
+	font-size: 1.5em;
+	color: #ffffff;
+	border-radius: 60px;
+	border: none;
+	background: #679CAB;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+.getGeolocation{
+	width: 250px;
+	height: 50px;
+}
+
+.getGeolocation:hover{
+	text-decoration: none;
 }
 
 li{
