@@ -15,11 +15,29 @@
 </head>
 
 <body>
-  
-  <h1>378 Website Starter</h1>
 
-  
-  
+  <p class="field">
+    <label>ENTER ZIP CODE</label>
+    <input type="text" id="zip">
+    <button id="getZip">Enter</button>
+  </p>
+
+  <p>  
+    <i class="green">
+      <span class="temp">Not Available</span>
+      <span class="city">Not Availabe</span>
+      <span class="state">Not Availabe</span>
+      <span class="country">Not Availabe</span>
+    </i>
+  </p>
+
+  <ul>
+    <li class="temp"> </li>
+    <li class="city"> </li>
+  </ul>
+
+  <button class="getGeolocation">Get Geolocation</button>
+
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
   <script src="js/semantic.min.js"></script>
   <script src="js/weather.js"></script>
