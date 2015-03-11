@@ -71,19 +71,19 @@ var loadWeather = function(location) {
       console.log(weather);
       
       // Get & store temperature
-      var yourTemp = weather.temp;
+      var temp = weather.temp;
       // Get & store city
-      var yourCity = weather.city;
+      var city = weather.city;
 
-      var yourState = weather.region;
+      var state = weather.region;
       //Get and store state
-      var yourCountry = weather.country;
+      var country = weather.country;
       
       // Output to hooks in HTML
-      $('.yourTemp').text(yourTemp);
-      $('.yourCity').text(yourCity);
-      $('.yourState').text(yourState);
-      $('.yourCountry').text(yourCountry);
+      $('.temp').text(temp);
+      $('.city').text(city);
+      $('.state').text(state);
+      $('.country').text(country);
       // See console for _weather_ object
       console.log(weather);
     }
