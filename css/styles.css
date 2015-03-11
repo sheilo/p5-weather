@@ -1,3 +1,7 @@
+.container{
+	float: left;
+}
+
 .rain{
 	background: url('../img/rain.png');
 }
@@ -10,10 +14,6 @@
 	background: url('../img/snow.png');
 }
 
-li{
-	list-style: none;
-}
-
 .layer {
     background-color: rgba(50, 61, 92, 0.55);
     position: absolute;
@@ -21,4 +21,14 @@ li{
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+p, 
+li, 
+button {
+	font-family: 'Quicksand', sans-serif;
+}
+
+li{
+	list-style: none;
 }
