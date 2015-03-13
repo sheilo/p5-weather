@@ -38,16 +38,17 @@ $('#getZip').click(function(){
   
 });
 
-  if (navigator.geolocation) {
-    // Yes! Show button
-    $('.getGeolocation').show(); 
-  } else {
-    // No. Hide button
-    $('.getGeolocation').hide();
-  }
+//  if (navigator.geolocation) {
+//    // Yes! Show button
+//    $('.getGeolocation').show(); 
+//  } else {
+//    // No. Hide button
+//    $('.getGeolocation').hide();
+//  }
 
 // 2. Get Geolocation & return Simple Weather
-$('.getGeolocation').on('click', function() {
+//$('.getGeolocation').on('click', function() {
+  $.getGeolocation({
   
     navigator.geolocation.getCurrentPosition(function(position) {
     //load weather using your lat/lng coordinates. See _loadWeather()_ below
