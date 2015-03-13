@@ -1,19 +1,18 @@
-
-
 .rain{
-	background: url('../img/rain.png');
+	background-color: rgba(50, 61, 92, 0.55);
 }
 
 .clear{
-	background: url('../img/clear.png');
+	background-color: rgba(50, 61, 92, 0.55);;
 }
 
 .snow{
-	background: url('../img/snow.png');
+	background-color: rgba(50, 61, 92, 0.55);;
 }
 
 .layer {
-    background-color: rgba(50, 61, 92, 0.55);
+    
+    background: url('../img/bg.png');
     position: absolute;
     top: 0;
     left: 0;
