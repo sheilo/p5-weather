@@ -42,6 +42,7 @@ $('#getZip').click(function(){
 
 // 2. Get Geolocation & return Simple Weather
 $.getGeolocation({
+
     navigator.geolocation.getCurrentPosition(function(position) {
     var lat = position.coords.latitude;
     var long = position.coords.longitude;
@@ -64,13 +65,13 @@ var loadWeather = function(location) {
       
       if (weather.code >= 24 && weather.code <= 30) {
         
-        $('body').addClass('cloudy');
+        $('body').addClass('snow');
         
       } 
             
       if (weather.code >= 31 && weather.code <= 34) {
         
-        $('body').addClass('fair');
+        $('body').addClass('clear');
         
       } 
       
