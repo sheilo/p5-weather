@@ -1,21 +1,24 @@
 .rain{
-	width: 100%;
+	width: 150%;
 	height: 100%;
 	position: absolute;
+	left: -25px;
 	background-color: rgba(50, 61, 92, 0.55);
 }
 
 .clear{
-	width: 100%;
+	width: 150%;
 	height: 100%;
 	position: absolute;
+	left: -25px;
 	background-color: rgba(50, 61, 92, 0.55);;
 }
 
 .snow{
-	width: 100%;
+	width: 150%;
 	height: 100%;
 	position: absolute;
+	left: -25px;
 	background-color: rgba(50, 61, 92, 0.55);;
 }
 
