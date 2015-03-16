@@ -29,6 +29,12 @@
     height: 100%;
 }
 
+.card {
+	position: absolute;
+	top: 10%;
+	left: 30%;
+}
+
 h1, 
 p, 
 li, 
