@@ -38,18 +38,27 @@ $('#getZip').click(function(){
   
 });
 
-
+  if (navigator.geolocation) {
+    // Yes! Show button
+    $('.getGeolocation').show(); 
+  } else {
+    // No. Hide button
+    $('.getGeolocation').hide();
+  }
 
 // 2. Get Geolocation & return Simple Weather
-$.getGeolocation({
+if ("geolocation" in navigator) {
+  $('.js-geolocation').show(); 
+  } else {
+    $('.js-geolocation').hide();
+  }
 
+  /* Where in the world are you? */
+  $('.js-geolocation').on('click', function() {
     navigator.geolocation.getCurrentPosition(function(position) {
-    var lat = position.coords.latitude;
-    var long = position.coords.longitude;
-    console.log(lat + ',' + long)
+      loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
+    });
   });
-  
-});
 
 // 3. Wrap SimpleWeather in a function called _loadWeather()
 var loadWeather = function(location) {
@@ -58,22 +67,19 @@ var loadWeather = function(location) {
     location: location,
     
     // Get _weather_ object
-
     success: function(weather) {
         
       console.log(weather);
       
-      if (weather.code >= 24 && weather.code <= 30) {
-        
-        $('body').addClass('snow');
-        
-      } 
-            
-      if (weather.code >= 31 && weather.code <= 34) {
-        
-        $('body').addClass('clear');
-        
-      } 
+        if (weather.code >= 24 && weather.code <= 30){
+            $('body').addClass('cloudy');
+            $('body').removeClass('fair');
+          }
+        }
+        // if error
+        error: function(error) {  
+          $('body').html('<p>' + error + '</p>');
+        } 
       
       // Get & store temperature
       var temp = weather.temp;
