@@ -47,18 +47,16 @@ $('#getZip').click(function(){
   }
 
 // 2. Get Geolocation & return Simple Weather
-if ("geolocation" in navigator) {
-  $('.js-geolocation').show(); 
-  } else {
-    $('.js-geolocation').hide();
-  }
-
-  /* Where in the world are you? */
-  $('.js-geolocation').on('click', function() {
+$('.getGeolocation').on('click', function() {
+  
     navigator.geolocation.getCurrentPosition(function(position) {
-      loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
-    });
+    //load weather using your lat/lng coordinates. See _loadWeather()_ below
+    loadWeather(position.coords.latitude+','+position.coords.longitude); 
+    // See latitute & longitude. Note, wait a few seconds
+    console.log(position.coords.latitude+','+position.coords.longitude);
   });
+  
+});
 
 // 3. Wrap SimpleWeather in a function called _loadWeather()
 var loadWeather = function(location) {
@@ -70,16 +68,6 @@ var loadWeather = function(location) {
     success: function(weather) {
         
       console.log(weather);
-      
-        if (weather.code >= 24 && weather.code <= 30){
-            $('body').addClass('cloudy');
-            $('body').removeClass('fair');
-          }
-        }
-        // if error
-        error: function(error) {  
-          $('body').html('<p>' + error + '</p>');
-        } 
       
       // Get & store temperature
       var temp = weather.temp;
